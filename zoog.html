@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script>
+      function setup() {
+  createCanvas(800,600);
+}
+
+function draw() {
+  background(135,206,235); // the blue background
+  
+  // the ground
+  fill(102,51,0); // the color brown
+  rect(0,425,800,425); // the ground
+  
+  // the body of the apple
+  fill("red");
+  strokeWeight(0);
+  ellipse(300,250,200,200);
+  
+  // the eyes of the apple
+  fill("black"); 
+  ellipse(270,240,15,20); // the left eye
+  ellipse(320,240,15,20); // the right eye
+  
+  // the mouth of the apple
+  fill("black");
+  noFill();
+  strokeWeight(8);
+  arc(300,270,20,20,0,PI); 
+  
+  // the arms of the appple
+  line(200,240,150,150); // the left arm
+  line(400,240,450,150); // the right arm
+  
+  // the legs of the apple
+  line(250,420,270,345); // the left leg
+  line(350,420,330,345); // the right leg
+
+  // the hands of the apple
+  rect(140,150,10,2,10); // the left hand
+  rect(450,150,10,2,10); // the right hand
+  
+  // the feet of the apple
+  rect(240,420,10,2,10); // the left foot
+  rect(350,420,10,2,10); // the right foot
+  
+  // the blushes of the apple
+  fill("pink");
+  strokeWeight(0);
+  ellipse(240,260,40,20); // the left blush
+  ellipse(350,260,40,20); // the right blush
+  
+  // greeting
+  fill("red"); 
+  textSize(24);
+  text("annyeong",450,200);
+  strokeWeight(5);
+  stroke("black"); 
+  line(564,180,564,190); // exclamation point
+  point(565,200); // exclamation point
+  
+  // the stem of the apple
+  strokeWeight(0);
+  fill(102,51,0); // the color brown
+  rotate(PI/-10);
+  rect(210,185,20,50);
+  
+  // the leaf of the apple
+  fill("green"); 
+  rotate(PI/-10); 
+  ellipse(180,290,70,20) 
+  
+}
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/lydiay3590/p5js/blob/master/zoog.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
