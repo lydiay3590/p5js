@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script>
+      var scale; // creates a variable called scale 
+
+function setup() {
+  createCanvas(600, 600); 
+  scale = 1 // sets the scale value equal to 1
+}
+
+function draw() {  
+  ellipse(mouseX, mouseY, scale * 80, scale * 80); // the head of the spider
+  ellipse(mouseX-20, mouseY+10, scale * 20, scale * 20); // left eye of the spider
+  ellipse(mouseX+20, mouseY+10, scale * 20, scale * 20); // right eye of the spider
+  
+  line(mouseX-70, mouseY-15, mouseX-40, mouseY+15); // left leg 1
+  line(mouseX-60, mouseY-20, mouseX-40, mouseY); // left leg 2
+  line(mouseX-60, mouseY-40, mouseX-35, mouseY-15); // left leg 3
+  line(mouseX-60, mouseY-60, mouseX-30, mouseY-30); // left leg 4
+  
+  line(mouseX+70, mouseY-55, mouseX+35, mouseY-20); // right leg 1
+  line(mouseX+70, mouseY-40, mouseX+40, mouseY-10); // right leg 2
+  line(mouseX+70, mouseY-25, mouseX+40, mouseY); // right leg 3 
+  line(mouseX+70, mouseY-10, mouseX+35, mouseY+18); // right leg 4
+}
+
+function keyPressed() {      
+  fill(random(255), random(255), random(255), 100) 
+  ellipse(mouseX, mouseY, scale * 80, scale * 80); // the head of the spider
+}
+
+function mouseMoved() {
+  background(random(255), random(255), random(255), 100) 
+  text("Press a key to change the color of the spider. Hold and right click on your mouse for a cool effect.", 40, 300); // instructions
+  text("Move your mouse to move the spider.", 190, 315); // instructions 
+}
+
+function mouseDragged() {
+  background(255,50)
+  line(mouseX,0,mouseX,mouseY) // the spider web
+}
+
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/lydiay3590/p5js/blob/master/interaction.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
