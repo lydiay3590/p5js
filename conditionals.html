@@ -1,1 +1,128 @@
+var r; // creates a variable called r
+var g; // creates a variable called g
+var b; // creates a variable called b
+
+function setup() {
+  createCanvas(700, 700);
+  r = 255; // sets the variable r equal to 255
+  g = 255; // sets the variable g equal to 255
+  b = 255; // sets the variable b equal to 255
+  
+}
+
+function draw() {
+  // bottom side of canvas has 4 circles that draws ellipses if clicked
+  fill("#db7093");
+  ellipse(100, 625, 70, 70); // pink box for circles
+  fill("#ffa07a");
+  ellipse(250, 625, 70, 70); // orange box for circles
+  fill("#f5f968");
+  ellipse(400, 625, 70, 70); // yellow box for circles
+  fill("white");
+  rect(550, 600, 60, 60); // eraser
+  fill("#97bfe5"); // blue
+  rect(580, 600, 60, 60); // eraser
+  
+  // top side of canvas has 3 boxes that draw rectangles if clicked
+  fill("#79c47e");
+  rect(125, 50, 70, 70); // green box for rectangles
+  fill("#6495ed");
+  rect(325, 50, 70, 70); // blue box for rectangles
+  fill("#9370db");
+  rect(525, 50, 70, 70); // purple box for rectangles 
+  
+  // middle of the canvas has 2 boxes that draws rectangles if clicked (random color);
+  noStroke();
+  fill(224, 132, 169);
+  rect(600, 200, 10, 70); // pink
+  fill(244, 133, 127);
+  rect(610, 200, 10, 70); // red
+  fill(232, 148, 88);
+  rect(620, 200, 10, 70); // orange
+  fill(242, 228, 128);
+  rect(630, 200, 10, 70); // yellow
+  fill(183, 242, 128);
+  rect(640, 200, 10, 70); // green
+  fill(117, 229, 229);
+  rect(650, 200, 10, 70); // blue
+  fill(178, 169, 232);
+  rect(660, 200, 10, 70); // purple
+  
+  fill(255); // white
+  rect(600, 350, 70, 70);
+  
+  // bottom side - ellipses
+  if (keyIsDown(90)) { // pink ellipse (key: z)
+    	noStroke();
+      fill("#db7093");
+      ellipse(mouseX, mouseY, 20, 20);
+    
+    }
+  
+  else if (keyIsDown(88)) { // orange ellipse (key: x)
+    	noStroke();
+      fill("#ffa07a");
+      ellipse(mouseX, mouseY, 20, 20);
+    }
+  
+  else if (keyIsDown(67)) { // yellow ellipse (key: c)
+    	noStroke();
+      fill("#f5f968");
+      ellipse(mouseX, mouseY, 20, 20);
+    }
+  
+  else if (keyIsDown(86)) { // erase (key: v)
+      clear();    
+    }
+  
+  // top side - rectangles
+  if (keyIsDown(81)) { // green rectangle (key: q)
+    	noStroke();
+      fill("#79c47e");
+      rect(mouseX, mouseY, 20, 20);
+    }
+  
+  else if (keyIsDown(87)) { // blue rectangle (key: w)
+    	noStroke();
+      fill("#6495ed");
+      rect(mouseX, mouseY, 20, 20);
+    }
+  
+  else if (keyIsDown(69)) { // purple rectangle (key: e)
+    	noStroke();
+      fill("#9370db");
+      rect(mouseX, mouseY, 20, 20);
+    }
+  
+  // middle part - ellipses
+  else if (keyIsDown(82)) { // random color (key: r)
+    noStroke();
+    fill(random(r), random(g), random(b));
+    rect(mouseX, mouseY, 20, 20);
+  }
+  
+  else if (keyIsDown(84)) { // white ellipse (key: t)
+    noStroke();
+    fill(255);
+    ellipse(mouseX, mouseY, 20, 20);
+
+  }
+    
+  // the text
+  fill(255);
+	textSize(50);
+  text("Q", 140, 105); // letter Q
+	text("W", 335, 105); // letter W
+	text("E", 545, 105); // letter E
+	fill(0);
+	text("Z", 85, 645); // letter Z
+	text("X", 235, 645); // letter X
+	text("C", 380, 645); // letter C
+	text("V", 590, 650); // letter V
+  fill(255);
+  text("R", 615, 255); // letter R
+  fill(0);
+  text("T", 620, 405); // letter T
+	
+}
 
